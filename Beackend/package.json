@@ -1,0 +1,32 @@
+{
+  "name": "mvc-express-setup",
+  "version": "1.0.8",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "bin": {
+    "setup-express-app": "scripts/setup.js"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "mvc",
+    "setup",
+    "backend"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "A simple Express server setup package for MVC architecture with MongoDB",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^12.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.1",
+    "nodemon": "^3.1.7"
+  }
+}
