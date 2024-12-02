@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const registerNewUser = async (req, res) => {
   const { name, email, mobileNumber, password } = req.body;
   try {
-    const hashPassword = bcrypt.hash(password, process.env.SALT_ROUND);
+    const hashPassword = await bcrypt.hash(password, Number(process.env.SALT_ROUND));
     const user = await new User({
       name,
       email,
@@ -19,7 +19,7 @@ const registerNewUser = async (req, res) => {
       .json({ message: "User Registeration Success", user: savedUser });
   } catch (error) {
     console.log(error);
-    res.status(400).josn({ message: "Error while registering user" });
+    res.status(400).json({ message: "Error while registering user" });
   }
 };
 
